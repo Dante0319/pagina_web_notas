@@ -1,0 +1,165 @@
+/* Estilos globales */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnMxNDBmNWduYTg0OWZja3plMDUwYmNwYzFuaXlwOW9zeHh0am01YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Basrh159dGwKY/giphy.webp') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilos del encabezado */
+header {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#titulo {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 50px;
+    color: #bdf5fc;
+    transition: transform 0.3s ease;
+}
+
+#titulo:hover {
+    transform: scale(1.2);
+}
+
+/* Estilos del contenedor de notas */
+.notas-container {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilos de las notas */
+.nota {
+    background: #f5e6ca;
+    border: 5px solid #ccc;
+    padding: 11px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.nota textarea {
+    width: 100%;
+    height: 100px;
+    border: none;
+    outline: none;
+    resize: none;
+    background: repeating-linear-gradient(
+        to bottom,
+        #f5e6ca,
+        #f5e6ca 23px,
+        #c2b280 24px,
+        #c2b280 25px
+    );
+    font-size: 16px;
+    color: #5b4636;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    line-height: 24px;
+}
+
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+}
+
+#agregar-nota {
+    background-color: #8764cd;
+    color: white;
+}
+
+.boton-guardar {
+    background-color: #78d37b;
+}
+
+.boton-editar {
+    background-color: #9577cf;
+}
+
+.boton-borrar {
+    background-color: #ff6262;
+}
+
+.mensaje-emergente {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 24px;
+    border-radius: 10px;
+    width: 20%;
+}
+
+.mensaje-emergente.success {
+    background-color: #9577cf;
+}
+
+.mensaje-emergente.error {
+    background-color: #ff3333;
+}
+
+.mensaje-emergente .mensaje-content {
+    font-size: 25px;
+}
+
+.close-button {
+    position: absolute;
+    top: 7px;
+    right: 11px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.close-button:hover {
+    color: #e82476;
+}
+
+#youtube-player {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: -1000px;
+}
+
+@media screen and (max-width: 480px) {
+    .notas-container {
+        width: 90vw;
+    }
+
+    header {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+}
